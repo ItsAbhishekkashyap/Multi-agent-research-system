@@ -1,4 +1,4 @@
-# 🔬 ResearchMind: Multi-Agent AI Research System
+# 🔬 ResearchMinds: Multi-Agent AI Research System
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?logo=streamlit&logoColor=white)
