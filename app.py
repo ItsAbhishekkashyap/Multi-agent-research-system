@@ -18,14 +18,14 @@ st.markdown("""
 /* ── Reset & base ── */
 html, body, [class*="css"] {
     font-family: 'DM Sans', sans-serif;
-    color: #e8e4dc;
+    color: #e4e4e7;
 }
 
 .stApp {
-    background: #0a0a0f;
+    background: #09090b;
     background-image:
-        radial-gradient(ellipse 80% 50% at 20% -10%, rgba(255,140,50,0.12) 0%, transparent 60%),
-        radial-gradient(ellipse 60% 40% at 80% 110%, rgba(255,80,30,0.08) 0%, transparent 55%);
+        radial-gradient(circle at 15% 50%, rgba(99, 102, 241, 0.08), transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(139, 92, 246, 0.08), transparent 25%);
 }
 
 /* ── Hide default streamlit chrome ── */
@@ -40,11 +40,11 @@ html, body, [class*="css"] {
 }
 .hero-eyebrow {
     font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 600;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #ff8c32;
+    color: #8b5cf6;
     margin-bottom: 1rem;
     opacity: 0.9;
 }
@@ -53,83 +53,85 @@ html, body, [class*="css"] {
     font-size: clamp(2.8rem, 6vw, 5rem);
     font-weight: 800;
     line-height: 1.0;
-    letter-spacing: -0.03em;
-    color: #f0ebe0;
+    letter-spacing: -0.04em;
+    color: #fafafa;
     margin: 0 0 1rem;
 }
 .hero h1 span {
-    color: #ff8c32;
+    background: linear-gradient(to right, #6366f1, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .hero-sub {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 300;
-    color: #a09890;
-    max-width: 520px;
+    color: #a1a1aa;
+    max-width: 540px;
     margin: 0 auto;
-    line-height: 1.65;
+    line-height: 1.6;
 }
 
 /* ── Divider ── */
 .divider {
     height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(255,140,50,0.3), transparent);
-    margin: 2rem 0;
+    background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+    margin: 2.5rem 0;
 }
 
 /* ── Input card ── */
 .input-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,140,50,0.15);
-    border-radius: 16px;
-    padding: 2rem 2.5rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 2.5rem;
     margin-bottom: 2rem;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
 }
 
 /* ── Streamlit input overrides ── */
 .stTextInput > div > div > input {
-    background: rgba(255,255,255,0.05) !important;
-    border: 1px solid rgba(255,140,50,0.25) !important;
-    border-radius: 10px !important;
-    color: #f0ebe0 !important;
+    background: rgba(0, 0, 0, 0.2) !important;
+    border: 1px solid rgba(99, 102, 241, 0.3) !important;
+    border-radius: 12px !important;
+    color: #fafafa !important;
     font-family: 'DM Sans', sans-serif !important;
-    font-size: 1rem !important;
-    padding: 0.75rem 1rem !important;
-    transition: border-color 0.2s, box-shadow 0.2s !important;
+    font-size: 1.05rem !important;
+    padding: 0.85rem 1.2rem !important;
+    transition: all 0.2s ease !important;
 }
 .stTextInput > div > div > input:focus {
-    border-color: #ff8c32 !important;
-    box-shadow: 0 0 0 3px rgba(255,140,50,0.12) !important;
+    border-color: #8b5cf6 !important;
+    box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.15) !important;
 }
 .stTextInput > label {
     font-family: 'DM Mono', monospace !important;
-    font-size: 0.72rem !important;
+    font-size: 0.75rem !important;
     letter-spacing: 0.15em !important;
     text-transform: uppercase !important;
-    color: #ff8c32 !important;
+    color: #a1a1aa !important;
     font-weight: 500 !important;
 }
 
 /* ── Button ── */
 .stButton > button {
-    background: linear-gradient(135deg, #ff8c32 0%, #ff5a1a 100%) !important;
-    color: #0a0a0f !important;
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%) !important;
+    color: #ffffff !important;
     font-family: 'Syne', sans-serif !important;
     font-weight: 700 !important;
-    font-size: 0.95rem !important;
-    letter-spacing: 0.04em !important;
+    font-size: 1rem !important;
+    letter-spacing: 0.05em !important;
     border: none !important;
-    border-radius: 10px !important;
-    padding: 0.7rem 2.2rem !important;
+    border-radius: 12px !important;
+    padding: 0.8rem 2.5rem !important;
     cursor: pointer !important;
-    transition: transform 0.15s, box-shadow 0.15s, opacity 0.15s !important;
-    box-shadow: 0 4px 20px rgba(255,140,50,0.3) !important;
+    transition: all 0.2s ease !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.25) !important;
     width: 100%;
 }
 .stButton > button:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 28px rgba(255,140,50,0.4) !important;
-    opacity: 0.95 !important;
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.35) !important;
 }
 .stButton > button:active {
     transform: translateY(0) !important;
@@ -137,154 +139,167 @@ html, body, [class*="css"] {
 
 /* ── Pipeline step cards ── */
 .step-card {
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
     padding: 1.5rem 1.8rem;
     margin-bottom: 1.2rem;
     position: relative;
     overflow: hidden;
-    transition: border-color 0.3s;
+    transition: all 0.3s ease;
 }
 .step-card.active {
-    border-color: rgba(255,140,50,0.4);
-    background: rgba(255,140,50,0.04);
+    border-color: rgba(99, 102, 241, 0.5);
+    background: rgba(99, 102, 241, 0.05);
+    transform: translateX(4px);
 }
 .step-card.done {
-    border-color: rgba(80,200,120,0.3);
-    background: rgba(80,200,120,0.03);
+    border-color: rgba(16, 185, 129, 0.3);
+    background: rgba(16, 185, 129, 0.03);
 }
 .step-card::before {
     content: '';
     position: absolute;
     left: 0; top: 0; bottom: 0;
-    width: 3px;
-    border-radius: 14px 0 0 14px;
-    background: rgba(255,255,255,0.05);
+    width: 4px;
+    border-radius: 16px 0 0 16px;
+    background: rgba(255, 255, 255, 0.05);
     transition: background 0.3s;
 }
-.step-card.active::before { background: #ff8c32; }
-.step-card.done::before   { background: #50c878; }
+.step-card.active::before { background: #6366f1; }
+.step-card.done::before   { background: #10b981; }
 
 .step-header {
     display: flex;
     align-items: center;
-    gap: 0.8rem;
-    margin-bottom: 0.3rem;
+    gap: 1rem;
+    margin-bottom: 0.4rem;
 }
 .step-num {
     font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    font-weight: 500;
+    font-size: 0.7rem;
+    font-weight: 600;
     letter-spacing: 0.15em;
-    color: #ff8c32;
-    opacity: 0.7;
+    color: #8b5cf6;
+    background: rgba(139, 92, 246, 0.1);
+    padding: 0.2rem 0.5rem;
+    border-radius: 6px;
 }
 .step-title {
     font-family: 'Syne', sans-serif;
-    font-size: 0.95rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: #f0ebe0;
+    color: #fafafa;
 }
 .step-status {
     margin-left: auto;
     font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.1em;
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    font-weight: 600;
 }
-.status-waiting  { color: #555; }
-.status-running  { color: #ff8c32; }
-.status-done     { color: #50c878; }
+.status-waiting  { color: #52525b; }
+.status-running  { color: #6366f1; animation: pulse 2s infinite; }
+.status-done     { color: #10b981; }
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
 
 /* ── Result panels ── */
 .result-panel {
-    background: rgba(255,255,255,0.025);
-    border: 1px solid rgba(255,255,255,0.07);
-    border-radius: 14px;
-    padding: 1.8rem 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
     margin-top: 1rem;
     margin-bottom: 1.5rem;
 }
 .result-panel-title {
     font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 600;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: #ff8c32;
-    margin-bottom: 1rem;
-    padding-bottom: 0.7rem;
-    border-bottom: 1px solid rgba(255,140,50,0.15);
+    color: #8b5cf6;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.2);
 }
 .result-content {
-    font-size: 0.92rem;
-    line-height: 1.8;
-    color: #cdc8bf;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #d4d4d8;
     white-space: pre-wrap;
     font-family: 'DM Sans', sans-serif;
 }
 
 /* ── Report & feedback panels ── */
 .report-panel {
-    background: rgba(255,255,255,0.025);
-    border: 1px solid rgba(255,140,50,0.2);
-    border-radius: 16px;
-    padding: 2rem 2.5rem;
-    margin-top: 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(99, 102, 241, 0.25);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 .feedback-panel {
-    background: rgba(255,255,255,0.025);
-    border: 1px solid rgba(80,200,120,0.2);
-    border-radius: 16px;
-    padding: 2rem 2.5rem;
-    margin-top: 1rem;
+    background: rgba(16, 185, 129, 0.02);
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 1.5rem;
 }
 .panel-label {
     font-family: 'DM Mono', monospace;
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.7rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.8rem;
 }
 .panel-label.orange {
-    color: #ff8c32;
-    border-bottom: 1px solid rgba(255,140,50,0.15);
+    color: #6366f1;
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
 }
 .panel-label.green {
-    color: #50c878;
-    border-bottom: 1px solid rgba(80,200,120,0.15);
+    color: #10b981;
+    border-bottom: 1px solid rgba(16, 185, 129, 0.2);
 }
 
 /* ── Progress text ── */
-.stSpinner > div { color: #ff8c32 !important; }
+.stSpinner > div { color: #8b5cf6 !important; }
 
 /* ── Expander ── */
 details summary {
     font-family: 'DM Mono', monospace !important;
-    font-size: 0.75rem !important;
-    color: #a09890 !important;
+    font-size: 0.8rem !important;
+    color: #a1a1aa !important;
     letter-spacing: 0.1em !important;
     cursor: pointer;
+    padding: 0.5rem 0;
 }
 
 /* ── Section heading ── */
 .section-heading {
     font-family: 'Syne', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 700;
-    color: #f0ebe0;
-    margin: 2rem 0 1rem;
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #fafafa;
+    margin: 2.5rem 0 1.5rem;
 }
 
 /* ── Toast-style notice ── */
 .notice {
     font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    color: #605850;
+    font-size: 0.75rem;
+    color: #52525b;
     text-align: center;
-    margin-top: 3rem;
-    letter-spacing: 0.08em;
+    margin-top: 4rem;
+    letter-spacing: 0.1em;
 }
 </style>
 """, unsafe_allow_html=True)
